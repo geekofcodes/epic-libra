@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# macOS metadata
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
