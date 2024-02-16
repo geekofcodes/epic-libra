@@ -1,20 +1,37 @@
-// BookCard.js
 import React from 'react';
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Button } from '@mui/material';
 
 const BookCard = ({ book }) => {
     return (
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-        <img src={book.image} alt={book.title} className="w-full h-48 object-cover" />
-        <div className="p-4">
-            <h3 className="text-xl font-bold">{book.title}</h3>
-            <p className="text-gray-600">{book.author}</p>
-            <p className="mt-2 text-gray-800">{book.description}</p>
-            <div className="flex justify-between items-center mt-4">
-            <span className="text-gray-600">${book.price}</span>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">Add to Cart</button>
-            </div>
-        </div>
-        </div>
+        <Card>
+            <CardActionArea>
+                <CardMedia
+                    component="img"
+                    height="200"
+                    image={book.image}
+                    alt={book.title}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {book.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {book.author}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" mt={2}>
+                        {book.description}
+                    </Typography>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}>
+                        <Typography variant="body1" color="text.secondary">
+                            ${book.price}
+                        </Typography>
+                        <Button variant="contained" color="primary">
+                            Add to Cart
+                        </Button>
+                    </div>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     );
 };
 
