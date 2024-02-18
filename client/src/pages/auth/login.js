@@ -33,12 +33,12 @@ const Login = ({ switchToSignup }) => {
                     <Form className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Email</label>
-                        <Field name="email" type="email" className="input-field" />
+                        <Field name="email" type="email" className="input-field border rounded p-2 focus:outline-none" />
                         <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Password</label>
-                        <Field name="password" type="password" className="input-field" />
+                        <Field name="password" type="password" className="input-field border rounded p-2 focus:outline-none" />
                         <ErrorMessage name="password" component="div" className="text-red-500 text-sm" />
                     </div>
                     <button type="submit" className="btn-primary">Login</button>
