@@ -1,6 +1,6 @@
 // bookService.js
 
-const BASE_URL = 'http://your-api-url/books';
+const BASE_URL = '/books';
 
 const bookService = {
     getAllBooks: async () => {

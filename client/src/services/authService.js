@@ -4,7 +4,7 @@ const authService = {
     loginUser: async (email, password) => {
         try {
             // Perform API request to log in user
-            const response = await fetch('http://your-api-url/login', {
+            const response = await fetch('/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const authService = {
     signupUser: async (name, email, password) => {
         try {
             // Perform API request to sign up user
-            const response = await fetch('http://your-api-url/signup', {
+            const response = await fetch('/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const authService = {
             throw error;
         }
     },
-    
+
     logoutUser: () => {
         // Remove user token or other stored information
         localStorage.removeItem('token');
